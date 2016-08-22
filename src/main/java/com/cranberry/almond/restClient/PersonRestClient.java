@@ -7,11 +7,11 @@ import com.sun.jersey.api.client.WebResource;
 public class PersonRestClient {
 	public static void main(String[] args) {
 		 
-		PersonRestClient crunchifyClient = new PersonRestClient();
-		crunchifyClient.getFtoCResponse();
+		PersonRestClient PersonRestClient = new PersonRestClient();
+		PersonRestClient.getPersonData();
 	}
  
-	private void getFtoCResponse() {
+	private void getPersonData() {
 		try {
  
 			Client client = Client.create();
@@ -22,7 +22,7 @@ public class PersonRestClient {
 			}
  
 			String output2 = response2.getEntity(String.class);
-			System.out.println("\n============getFtoCResponse============");
+			System.out.println("\n============PERSON DATA FROM RESPONSE============");
 			System.out.println(output2);
  
 		} catch (Exception e) {
